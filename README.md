@@ -28,7 +28,6 @@ R__LOAD_LIBRARY(libmemsizetest.so)</br>
 <p>
 for the TClonesArray Example:</br></br>
 
-
 #include "GenerateTCHits.h"</br>
 R__LOAD_LIBRARY(libmemsizetest.so)</br>
   GenerateTCHits *gen = new GenerateTCHits();</br>
