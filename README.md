@@ -48,8 +48,8 @@ Saving the same information in a TClonesArray in a TTree branch:
 ![TTree TClonesArray](TClonesArray.png)
 
 Just writing the object:</br>
-STL Map:
+STL Map:</br>
 ![STL Object](NoTTreeSTLMap.png)
 
-TClonesArray:
+TClonesArray:</br>
 ![TClonesArray](NoTTreeTClonesArray.png)
