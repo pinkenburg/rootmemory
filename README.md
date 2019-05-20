@@ -42,7 +42,14 @@ valgrind --tool=massif --time-unit=B --detailed-freq=1 root.exe
 
 
 Saving an STL Map in a TTree branch:
-![STL Object](STLMap.png)
+![TTree STL Object](STLMap.png)
 
 Saving the same information in a TClonesArray in a TTree branch:
-![TClonesArray](TClonesArray.png)
+![TTree TClonesArray](TClonesArray.png)
+
+Just writing the object:</br>
+STL Map:
+![STL Object](NoTTreeSTLMap.png)
+
+TClonesArray:
+![TClonesArray](NoTTreeTClonesArray.png)
