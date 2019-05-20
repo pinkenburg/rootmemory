@@ -2,41 +2,42 @@
 Test code showing memory usage for STL compared to TClonesArrays for ROOT developers. It is run under SL7.3
 
 usage:
-It needs the auto tools (autoconf, automake and libtool from the SL7.3 disribution), ROOTSYS has to be set, root tools need to be in your path
+It needs the auto tools (autoconf, automake and libtool from the SL7.3 disribution), ROOTSYS has to be set, root tools need to be in your path</br></br>
+<p>
 
-<verbatim>
-git clone https://github.com/pinkenburg/rootmemory
-cd rootmemory
-mkdir build
-cd build
-../autogen.sh --prefix=<install area>
+git clone https://github.com/pinkenburg/rootmemory</br>
+cd rootmemory</br>
+mkdir build</br>
+cd build</br>
+../autogen.sh --prefix=<install area></br>
 </verbatim>
-set ROOT_INCLUDE_PATH to <install area>/include/memsizetest
+set ROOT_INCLUDE_PATH to <install area>/include/memsizetest</br>
+<p>
+start root, on the prompt for the STL Example:</br></br>
 
-start root, on the prompt for the STL Example:
 
-<verbatim>
-#include "GenerateSTLHits.h"
-R__LOAD_LIBRARY(libmemsizetest.so)
-  GenerateSTLHits *gen = new GenerateSTLHits();
-  gen->Init();
-  gen->Run(5);
-  gen->End();
-  gSystem->Exit(0);
-</verbatim>
+#include "GenerateSTLHits.h"</br>
+R__LOAD_LIBRARY(libmemsizetest.so)</br>
+  GenerateSTLHits *gen = new GenerateSTLHits();</br>
+  gen->Init();</br>
+  gen->Run(5);</br>
+  gen->End();</br>
+  gSystem->Exit(0);</br>
 
-for the TClonesArray Example:
 
-<verbatim>
-#include "GenerateTCHits.h"
-R__LOAD_LIBRARY(libmemsizetest.so)
-  GenerateTCHits *gen = new GenerateTCHits();
-  gen->Init();
-  gen->Run(5);
-  gen->End();
-  gSystem->Exit(0);
-</verbatim>
+<p>
+for the TClonesArray Example:</br></br>
 
+
+#include "GenerateTCHits.h"</br>
+R__LOAD_LIBRARY(libmemsizetest.so)</br>
+  GenerateTCHits *gen = new GenerateTCHits();</br>
+  gen->Init();</br>
+  gen->Run(5);</br>
+  gen->End();</br>
+  gSystem->Exit(0);</br>
+
+<p>
 running this under massif the output from massif-visualizer under ubuntu 16.04.6: </br>
 valgrind --tool=massif --time-unit=B --detailed-freq=1 root.exe
 
