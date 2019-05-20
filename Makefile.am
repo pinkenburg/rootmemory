@@ -8,14 +8,11 @@ lib_LTLIBRARIES = \
   libmemsizetest.la
 
 AM_CXXFLAGS = \
- -Werror
+  -Werror
 
 AM_LDFLAGS = \
   -L$(libdir) \
-`root-config --libs`
-
-#libmemsizetest_la_LIBADD = \
-#  `root-config --libs`
+  `root-config --libs`
 
 pkginclude_HEADERS = \
   GenerateTCHits.h \
@@ -38,8 +35,6 @@ if MAKEROOT6
     MyRootTCContainer_Dict_rdict.pcm \
     MyRootHit_Dict_rdict.pcm \
     MyRootHitv1_Dict_rdict.pcm
-else
-  ROOT5_DICTS =
 endif
 
 libmemsizetest_la_SOURCES = \
